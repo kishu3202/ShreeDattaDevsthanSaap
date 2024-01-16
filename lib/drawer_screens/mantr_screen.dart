@@ -78,7 +78,6 @@ class MyAppState extends State<MantrScreen> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-
     // Release decoders and buffers back to the operating system making them
     // available for other apps to use.
     _player.dispose();
@@ -89,14 +88,27 @@ class MyAppState extends State<MantrScreen> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     _init();
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(title: Text('मंत्र'),centerTitle: true,),
         body: SingleChildScrollView(
-          child: Center(child: Text("ऊॅ क्रिम कालिकायै नमः|")),
+          // child: Center(child: Text("ऊॅ क्रिम कालिकायै नमः|")),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+            child: Column(
+              children: [
+                Container(
+                  height: 50,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.yellowAccent.shade100,
+                    borderRadius: BorderRadius.circular(10.0)
+                  ),
+                  child: Center(child: Text("ऊॅ क्रिम कालिकायै नमः|", style: TextStyle(fontSize: 18),)),
+                )
+              ],
+            ),
+          ),
         ),
-      ),
     );
   }
 }
