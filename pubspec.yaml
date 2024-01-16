@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   icons_flutter: ^0.0.4
   scroll_loop_auto_scroll: ^0.0.5
-  audioplayers: ^5.2.1
+  just_audio: ^0.9.36
 
 
 dev_dependencies:
