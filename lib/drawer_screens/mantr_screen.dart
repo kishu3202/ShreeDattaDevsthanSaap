@@ -92,8 +92,9 @@ class MyAppState extends State<MantrScreen> with WidgetsBindingObserver {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SafeArea(
-          child: Text("hello"),
+        appBar: AppBar(title: Text('मंत्र'),centerTitle: true,),
+        body: SingleChildScrollView(
+          child: Center(child: Text("ऊॅ क्रिम कालिकायै नमः|")),
         ),
       ),
     );
